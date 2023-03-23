@@ -130,7 +130,7 @@ def start(update, context):
     buttons.buildbutton(f"{config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''This bot can mirror all your links to Google Drive!
+        start_string = f'''John Wick  can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         if config_dict['PICS']:
@@ -138,7 +138,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else:
             sendMessage(start_string, context.bot, update.message, reply_markup)
     else:
-        text = f"Not Authorized user, deploy your own mirror bot"
+        text = f"You can't use me here, You can only use me in @SigmaMirror"
         if config_dict['PICS']:
             sendPhoto(text, context.bot, update.message, rchoice(config_dict['PICS']), reply_markup)
         else:
@@ -174,7 +174,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/weebzone/WZML'>WeebZone</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b><a href='Sigma Mirror'>John Wick</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
@@ -255,7 +255,7 @@ help_user = telegraph.create_page(
     content=help_string_telegraph_user)["path"]
 
 help_string_telegraph_admin = f'''
-<b><u>Admin Commands</u></b>
+<b><u>Owner Commands</u></b>
 <br><br>
 • <b>/{BotCommands.PingCommand}</b>: Check how long it takes to Ping the Bot
 <br><br>
